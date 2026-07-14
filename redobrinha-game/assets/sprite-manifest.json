@@ -1,0 +1,108 @@
+{
+  "idle_front": {
+    "count": 5,
+    "w": 74,
+    "h": 111,
+    "files": [
+      "sprites/idle_front/0.png",
+      "sprites/idle_front/1.png",
+      "sprites/idle_front/2.png",
+      "sprites/idle_front/3.png",
+      "sprites/idle_front/4.png"
+    ]
+  },
+  "run": {
+    "count": 8,
+    "w": 102,
+    "h": 95,
+    "files": [
+      "sprites/run/0.png",
+      "sprites/run/1.png",
+      "sprites/run/2.png",
+      "sprites/run/3.png",
+      "sprites/run/4.png",
+      "sprites/run/5.png",
+      "sprites/run/6.png",
+      "sprites/run/7.png"
+    ]
+  },
+  "walk": {
+    "count": 8,
+    "w": 105,
+    "h": 95,
+    "files": [
+      "sprites/walk/0.png",
+      "sprites/walk/1.png",
+      "sprites/walk/2.png",
+      "sprites/walk/3.png",
+      "sprites/walk/4.png",
+      "sprites/walk/5.png",
+      "sprites/walk/6.png",
+      "sprites/walk/7.png"
+    ]
+  },
+  "wave": {
+    "count": 4,
+    "w": 73,
+    "h": 107,
+    "files": [
+      "sprites/wave/0.png",
+      "sprites/wave/1.png",
+      "sprites/wave/2.png",
+      "sprites/wave/3.png"
+    ]
+  },
+  "jump": {
+    "count": 5,
+    "w": 94,
+    "h": 90,
+    "files": [
+      "sprites/jump/0.png",
+      "sprites/jump/1.png",
+      "sprites/jump/2.png",
+      "sprites/jump/3.png",
+      "sprites/jump/4.png"
+    ]
+  },
+  "emotion": {
+    "count": 8,
+    "w": 85,
+    "h": 109,
+    "files": [
+      "sprites/emotion/0.png",
+      "sprites/emotion/1.png",
+      "sprites/emotion/2.png",
+      "sprites/emotion/3.png",
+      "sprites/emotion/4.png",
+      "sprites/emotion/5.png",
+      "sprites/emotion/6.png",
+      "sprites/emotion/7.png"
+    ]
+  },
+  "magic": {
+    "count": 6,
+    "w": 98,
+    "h": 113,
+    "files": [
+      "sprites/magic/0.png",
+      "sprites/magic/1.png",
+      "sprites/magic/2.png",
+      "sprites/magic/3.png",
+      "sprites/magic/4.png",
+      "sprites/magic/5.png"
+    ]
+  },
+  "inspect": {
+    "count": 6,
+    "w": 87,
+    "h": 110,
+    "files": [
+      "sprites/inspect/0.png",
+      "sprites/inspect/1.png",
+      "sprites/inspect/2.png",
+      "sprites/inspect/3.png",
+      "sprites/inspect/4.png",
+      "sprites/inspect/5.png"
+    ]
+  }
+}
