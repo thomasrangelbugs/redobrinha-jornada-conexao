@@ -4,11 +4,13 @@
 
 **Jogar online:** [https://redobrinha.netlify.app](https://redobrinha.netlify.app)
 
+**Conhecer a Redobrai:** [https://www.redobrai.com](https://www.redobrai.com/)
+
 ## Sobre o projeto
 
 Redobrinha é um jogo de plataforma side-scrolling no navegador. O jogador controla a mascote da Redobrai, recupera núcleos de conexão, quebra blocos, desvia de inimigos e atravessa a fenda entre fases. As fases são geradas proceduralmente, com clima, estação, trilha sonora, efeitos sonoros e progresso salvo no navegador.
 
-O projeto é 100% estático (HTML, CSS e JavaScript), otimizado para PC e celular, com controles touch nas laterais, tela cheia e suporte a orientação landscape.
+O projeto é 100% estático (HTML, CSS e JavaScript), otimizado para PC e celular, com controles touch nas laterais, tela cheia e suporte a orientação landscape. Inclui a identidade da Redobrai Corp com link para o site oficial.
 
 ## Funcionalidades principais
 
@@ -19,6 +21,7 @@ O projeto é 100% estático (HTML, CSS e JavaScript), otimizado para PC e celula
 - Trilha e efeitos com volumes separados
 - Controles teclado (PC) e touch nas faixas laterais (celular)
 - Tela cheia no celular ao iniciar e botão/atalho F no PC
+- Logo Redobrai Corp com link para https://www.redobrai.com/
 - Save local (`localStorage`) com continuar partida
 - Layout responsivo e aviso para girar o celular
 
