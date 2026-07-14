@@ -234,7 +234,7 @@ function makePlayer(spawn){
   return{
     x:spawn?.x??100,y:spawn?.y??430,w:56,h:SPRITE_H,vx:0,vy:0,on:false,big:false,inv:0,
     frame:0,face:1,squash:1,landFlash:0,wasOn:false,lastStep:0,idleTime:0,anim:'idle',
-    think:false,checkpoint:spawn?.checkpoint||null,hurtFlash:0,poseT:0
+    think:false,checkpoint:spawn?.checkpoint||null,hurtFlash:0,poseT:0,jumpsLeft:2
   };
 }
 
@@ -309,17 +309,22 @@ function aiThink(dt){
     if(pow)wantJump=true;
     if(blockUp)wantJump=true;
     if(aiStuck>.45){wantJump=true;aiStuck=0}
+  }else if(p.jumpsLeft>0){
+    // Pullo duplo: buraco ainda à frente, ameaça ou stuck no ar
+    if(nearEdge||!groundAhead)wantJump=true;
+    if(threat&&threat.x-p.x<140)wantJump=true;
+    if(coin&&coin.y<p.y-10)wantJump=true;
+    if(aiStuck>.28){wantJump=true;aiStuck=0}
   }
 
   // Evitar precipício: se muito perto da beira e salto não cobre, recuar um pouco
   if(p.on&&nearEdge&&!groundAhead){
-    // ainda pula — gap gap típico ~55-130
     wantJump=true;
   }
 
   // Flyer: se passar por baixo sem stomp, ok; se ameaça spike no ar, acelerar
-  if(threat&&threat.type==='spike'&&p.on&&threat.x-p.x<70){
-    keys.left=true;keys.right=false; // recua e prepara pulo
+  if(threat&&threat.type==='spike'&&threat.x-p.x<70){
+    if(p.on){keys.left=true;keys.right=false}
     wantJump=true;
   }
 
@@ -351,9 +356,18 @@ function update(dt){
   p.vx=Math.max(-maxSp,Math.min(maxSp,p.vx+windForce*dt));
   if(t.heat&&Math.abs(p.vx)>20)p.vx*=Math.pow(.92,dt); // sticky summer sand feel lightly
 
-  if(keys.jump&&p.on){
-    p.vy=wantSprint?-780:-720;p.on=false;p.squash=.7;p.anim='jump';
-    sfx('jump');dust(p.x+p.w/2,p.y+p.h,p.face);
+  if(p.on)p.jumpsLeft=2;
+  if(keys.jump&&p.jumpsLeft>0){
+    const midAir=!p.on;
+    p.jumpsLeft--;
+    // Pulo do chão um pouco mais alto; duplo um pouco mais fraco, mas ainda decisivo
+    p.vy=midAir?(wantSprint?-700:-660):(wantSprint?-800:-740);
+    p.on=false;p.squash=.65;p.anim=midAir?'jumpUp':'jump';
+    sfx('jump');
+    if(midAir){
+      burst(p.x+p.w/2,p.y+p.h*.7,8,['#4ff5b0','#dfffee','#a8f3ff'],160);
+      dust(p.x+p.w/2,p.y+p.h*.85,p.face);
+    }else dust(p.x+p.w/2,p.y+p.h,p.face);
   }
   keys.jump=false;
   p.vy+=1920*dt;
@@ -387,7 +401,7 @@ function update(dt){
     }
   }
 
-  if(!p.wasOn&&p.on){p.squash=1.2;p.landFlash=.22;dust(p.x+p.w/2,p.y+p.h,p.face||1);sfx('land')}
+  if(!p.wasOn&&p.on){p.squash=1.2;p.landFlash=.22;p.jumpsLeft=2;dust(p.x+p.w/2,p.y+p.h,p.face||1);sfx('land')}
   if(p.y>H+120)hurt(true);
   if(p.vx)p.face=Math.sign(p.vx);
 

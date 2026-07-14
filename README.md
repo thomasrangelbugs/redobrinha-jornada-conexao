@@ -66,7 +66,7 @@ Abra `http://localhost:8080`.
 |---|---|
 | ← → / A D andar | ◀ ▶ na faixa esquerda |
 | Shift correr | ⚡ na faixa direita |
-| Espaço / W / ↑ pular | ▲ na faixa direita |
+| Espaço / W / ↑ pular (duplo no ar) | ▲ na faixa direita (duplo no ar) |
 | M mutar | Botão ♪ |
 | F tela cheia | Abre ao iniciar / botão ⛶ |
 | Esc | Menu / sair do Modo IA | Toque assume o controle no Modo IA |
