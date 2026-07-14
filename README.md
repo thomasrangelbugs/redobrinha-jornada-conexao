@@ -20,9 +20,10 @@ O projeto é 100% estático (HTML, CSS e JavaScript), otimizado para PC e celula
 - Clima e estação dinâmicos por fase
 - Trilha e efeitos com volumes separados
 - Controles teclado (PC) e touch nas faixas laterais (celular)
+- **Modo IA**: a Redobrinha joga sozinha (demo); toque/tecla assume o controle; Esc volta ao menu
 - Tela cheia no celular ao iniciar e botão/atalho F no PC
 - Logo Redobrai Corp com link para https://www.redobrai.com/
-- Save local (`localStorage`) com continuar partida
+- Save local (`localStorage`) com continuar partida (o Modo IA não sobrescreve o save)
 - Layout responsivo e aviso para girar o celular
 
 ## Tecnologias utilizadas
@@ -68,6 +69,11 @@ Abra `http://localhost:8080`.
 | Espaço / W / ↑ pular | ▲ na faixa direita |
 | M mutar | Botão ♪ |
 | F tela cheia | Abre ao iniciar / botão ⛶ |
+| Esc | Menu / sair do Modo IA | Toque assume o controle no Modo IA |
+
+## Modo IA
+
+No menu, **MODO IA** inicia uma demonstração em que a Redobrinha corre, pula e coleta núcleos sozinha. Não grava no save do jogador. Qualquer input manual assume o controle; **Esc** volta ao menu.
 
 ## Deploy no Netlify
 

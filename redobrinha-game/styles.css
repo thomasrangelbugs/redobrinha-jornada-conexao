@@ -54,6 +54,13 @@ button{
 }
 button:hover{transform:translateY(-2px);filter:brightness(1.08)}
 button.ghost{background:transparent;color:var(--mint);border:2px solid #4ff5b066;box-shadow:none}
+body.ai-playing #touch{opacity:.55}
+body.ai-playing #touch::after{
+  content:"IA jogando · toque para assumir · Esc sai";
+  position:absolute;left:50%;bottom:100%;transform:translateX(-50%);
+  white-space:nowrap;font-size:12px;color:#c9a0ff;background:#06151dcc;
+  padding:6px 12px;border-radius:999px;margin-bottom:8px;pointer-events:none;
+}
 small{color:#9bb3ba;max-width:640px;font-size:clamp(11px,2vw,14px);padding:0 12px}
 #scoreCard,#overCard{
   font-size:clamp(15px,3vw,20px);line-height:1.7;background:#071b24aa;padding:14px 28px;
