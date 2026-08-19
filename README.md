@@ -1,4 +1,4 @@
-# Redobrinha — A Jornada da Conexão
+﻿# Redobrinha — A Jornada da Conexão
 
 > Jogo web de plataforma procedural em HTML5 Canvas, criado pela Redobrai.
 
@@ -88,6 +88,11 @@ No menu, **MODO IA** inicia uma demonstração em que a Redobrinha corre, pula e
 
 Salvo em `localStorage` (`redobrinha_save_v2`): fase, vidas, score, checkpoint e recorde.
 
+
+## Requisitos
+
+- Navegador moderno (Chrome, Edge, Firefox ou Safari atualizado)
+- Conexão com a internet apenas para recursos externos integrados, quando aplicável
 ## Repositório
 
 [github.com/thomasrangelbugs/redobrinha-jornada-conexao](https://github.com/thomasrangelbugs/redobrinha-jornada-conexao)
